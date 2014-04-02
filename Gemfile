@@ -15,6 +15,8 @@ gem 'websocket-rails'
 gem 'pry'
 gem 'haml'
 
+gem 'rails_12factor', group: :production
+
 group :doc do
   gem 'sdoc', require: false
 end
