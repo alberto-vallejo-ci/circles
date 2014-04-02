@@ -1,5 +1,6 @@
 class CirclesController < WebsocketRails::BaseController
   def create
-    send_message :create, message, namespace: :circles
+    value = rand(100)
+    broadcast_message :create, value, namespace: :circles
   end
 end
