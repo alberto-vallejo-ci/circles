@@ -1,7 +1,7 @@
 @Circle = ->
 
   initialize: ->
-    @dispatcher = new WebSocketRails 'localhost:3000/websocket'
+    @dispatcher = new WebSocketRails "#{window.location.host + window.location.pathname}websocket"
 
     @dispatcher.bind 'circles.index', (circles) ->
       for circle in circles
