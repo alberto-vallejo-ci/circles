@@ -17,6 +17,14 @@ gem 'haml'
 
 gem 'rails_12factor', group: :production
 
+group :test do
+  gem 'capybara-screenshot'
+  gem 'database_cleaner'
+  gem 'cucumber-rails', require: false
+  gem 'rspec-rails'
+  gem 'selenium-webdriver'
+end
+
 group :doc do
   gem 'sdoc', require: false
 end
