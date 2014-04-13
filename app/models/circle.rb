@@ -1,7 +1,7 @@
 class Circle < ActiveRecord::Base
-  after_create :set_color
+  after_create :set_values
 
-  def set_color
-    self.color = "##{rand(9)}#{rand(9)}#{rand(9)}"
+  def set_values
+    update_attributes! color: "##{rand(9)}#{rand(9)}#{rand(9)}", label: "Guest_#{token}"
   end
 end

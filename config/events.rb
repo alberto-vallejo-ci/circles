@@ -4,5 +4,6 @@ WebsocketRails::EventMap.describe do
     subscribe :create, :to => CirclesController, :with_method => :create
     subscribe :destroy, :to => CirclesController, :with_method => :destroy
     subscribe :move, :to => CirclesController, :with_method => :move
+    subscribe :update, :to => CirclesController, :with_method => :update
   end
 end
