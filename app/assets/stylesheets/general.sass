@@ -1,5 +1,7 @@
 body
   overflow: hidden
+.hidden
+  display: none
 
 #main-container
   border: solid 1px black
@@ -15,10 +17,27 @@ body
     top: 50%
     width: 40px
 
-    .circle-label
+
+    .circle-chat, .circle-label
       border: none
-      cursor: pointer
       left: -45px
       position: absolute
+
+    .circle-label
+      cursor: pointer
       text-align: center
       top: 42px
+
+    .circle-chat
+      top: -25px
+
+      &.highlight
+        background-color: #D3FFFC
+
+    .label-chat
+      font-size: 13px
+      left: -63px
+      position: absolute
+      text-align: center
+      top: -33px
+      width: 160px

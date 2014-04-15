@@ -12,7 +12,7 @@ class CirclesController < WebsocketRails::BaseController
   end
 
   def update
-    @circle.update_attributes! label: message[:label]
+    @circle.update_attributes! label: message[:text]
     broadcast_message :update, @circle, namespace: :circles
   end
 
@@ -24,6 +24,10 @@ class CirclesController < WebsocketRails::BaseController
   def move
     @circle.update_attributes!(pos_x: message[:pos_x], pos_y: message[:pos_y])
     broadcast_message :move, message, namespace: :circles
+  end
+
+  def chat
+    broadcast_message :chat, message, namespace: :circles
   end
 
   private
