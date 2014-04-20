@@ -9,16 +9,16 @@ $ ->
 
     if e.keyCode is 38
       direction = 'top'
-      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) - 5
+      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) - 10
     else if e.keyCode is 40
       direction = 'top'
-      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) + 5
+      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) + 10
     else if e.keyCode is 39
       direction = 'left'
-      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) + 5
+      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) + 10
     else if e.keyCode is 37
       direction = 'left'
-      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) - 5
+      new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) - 10
     else if e.keyCode is 13
       action = 'update'
     else if e.keyCode is 67
