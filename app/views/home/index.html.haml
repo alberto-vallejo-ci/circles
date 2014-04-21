@@ -2,6 +2,7 @@
 
 
 :coffee
-  window.Circle = new Circle()
-  Circle.initialize()
-  Circle.dispatchCreate()
+  $ ->
+    window.PlayArea = new CircleGame.PlayArea()
+    window.Circle = new CircleGame.Circle()
+    window.Utils = new CircleGame.Utils()
