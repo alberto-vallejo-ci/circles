@@ -3,18 +3,17 @@ ruby '2.1.0'
 
 gem 'rails', '4.0.3'
 
-gem 'pg'
-
-gem 'sass-rails', '~> 4.0.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
-gem 'jquery-rails'
-gem 'thin'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.2'
-gem 'websocket-rails'
-gem 'pry'
+gem 'coffee-rails'
 gem 'haml'
+gem 'jquery-rails'
+gem 'pg'
+gem 'pry'
+gem 'rails_best_practices'
+gem 'thin'
+gem 'sass-rails'
+gem 'turbolinks'
+gem 'uglifier'
+gem 'websocket-rails'
 
 gem 'rails_12factor', group: :production
 
