@@ -50,7 +50,7 @@ $ ->
 
     draw_circle: (circle) ->
       "<div id='circle_#{circle.token}'
-            class='circle'
+            class='circle #{circle.state}'
             style='border-color:#{circle.color}; top: #{circle.pos_y}px; left: #{circle.pos_x}px'>
         <label class='label-chat'></label>
         <input type='text' class='circle-chat hidden' value='' />
