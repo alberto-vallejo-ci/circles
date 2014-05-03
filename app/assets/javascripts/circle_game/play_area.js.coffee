@@ -11,7 +11,7 @@ $ ->
       $('#main-container').addClass('play-area')
 
     bindEvents: ->
-      $('body').on 'keydown', (e)->
+      $('body').on 'keyup', (e)->
         if e.keyCode is 38
           direction = 'top'
           new_value = parseInt($("#circle_#{Circle.circle_value}").css(direction)) - 10

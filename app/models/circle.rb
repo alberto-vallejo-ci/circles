@@ -1,7 +1,16 @@
 class Circle < ActiveRecord::Base
   after_create :set_values
 
+  #0202B3
+  #A20000
+
+
   def set_values
-    update_attributes! color: "##{rand(9)}#{rand(9)}#{rand(9)}", label: "Guest_#{token}"
+    update_attributes! label: "Guest_#{token}", state: "#{get_state }"
   end
+
+  def get_state
+    ['hunter', 'prey'].sample()
+  end
+
 end
