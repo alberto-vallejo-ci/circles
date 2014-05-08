@@ -24,8 +24,9 @@ $ ->
       @dispatcher.bind 'circles.destroy', (circle_value)->
         $("#circle_#{circle_value}").remove()
 
-      @dispatcher.bind 'circles.move', (values)->
+      @dispatcher.bind 'circles.move', (values)=>
         $("#circle_#{values.token}").css(values.dir, values.value)
+        Utils.validateTouch(@circle_value, values.token) unless  @circle_value is values.token
 
       @dispatcher.bind 'circles.update', (circle) ->
         $("#circle_#{circle.token} .circle-label").val circle.label
@@ -38,6 +39,9 @@ $ ->
           @cleanLabelBox(label_chat)
           return
         ), 3000
+
+      @dispatcher.bind 'circles.touch', (circle) ->
+        $("#circle_#{circle.token}").addClass 'touched'
 
     loadCircles: ->
       @dispatcher.trigger('circles.index')

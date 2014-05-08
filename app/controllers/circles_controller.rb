@@ -30,6 +30,10 @@ class CirclesController < WebsocketRails::BaseController
     broadcast_message :chat, message, namespace: :circles
   end
 
+  def touch
+    broadcast_message :touch, message, namespace: :circles
+  end
+
   private
 
   def find_circle

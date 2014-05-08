@@ -6,5 +6,6 @@ WebsocketRails::EventMap.describe do
     subscribe :move,    to: CirclesController, with_method: :move
     subscribe :update,  to: CirclesController, with_method: :update
     subscribe :chat,    to: CirclesController, with_method: :chat
+    subscribe :touch,    to: CirclesController, with_method: :touch
   end
 end
